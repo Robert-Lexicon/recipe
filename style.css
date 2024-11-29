@@ -12,12 +12,12 @@ img {
   display: block;
 }
 
+/* Don't leave single words hanging at last line */
 p {
   text-wrap: pretty;
 }
 
 /* Global styling */
-
 :root {
   --clr-primary-400: hsl(0, 100%, 32%);
 
@@ -32,17 +32,13 @@ body {
   background-color: hsla(from var(--clr-primary-400) h s l / 0.3);
 }
 
-main {
+main > article {
   max-width: 1280px;
   margin-inline: auto;
-}
-
-main > article {
   background-color: var(--clr-neutral-900);
-  padding: 4rem;
 }
 
-header > img {
+article > img {
   height: 500px;
   width: 100%;
   object-fit: cover;
@@ -92,6 +88,14 @@ ul {
   padding: 1em;
 }
 
+.px-4 {
+  padding-inline: 4rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
 .text-normal {
   font-weight: normal;
 }
@@ -115,6 +119,11 @@ ul {
     height: 467px;
     /* aspect-ratio: 1/1; */
   }
+}
+
+.wrapper {
+  padding-block: min(5vw, 4rem);
+  padding-inline: min(5vw, 4rem);
 }
 
 /* Queries */
