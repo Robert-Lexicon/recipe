@@ -13,12 +13,14 @@ body {
   width: 100%;
   height: 100%;
 }
+
 .container {
   position: relative;
   transform: translate(
     calc(var(--card-height) / 2 * -1),
     calc(var(--card-height) / 2 * -1)
   );
+
   &:hover {
     .card {
       transform: rotate(
@@ -41,6 +43,7 @@ body {
   );
   z-index: calc(var(--index) * -1);
 }
+
 .card:nth-child(1) {
   --index: 1;
 }
